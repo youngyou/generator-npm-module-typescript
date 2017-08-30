@@ -52,5 +52,5 @@
     }
   },
   "repository": "youngyou/generator-npm-module-typescript",
-  "private": true
+  "license": "MIT"
 }
