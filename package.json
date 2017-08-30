@@ -1,0 +1,56 @@
+{
+  "name": "generator-npm-module-typescript",
+  "version": "0.0.0",
+  "description": "Generate npm module written in typescript",
+  "homepage": "",
+  "author": {
+    "name": "Keyon U",
+    "email": "youngyou.name@gmail.com",
+    "url": "https://justso.cool"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "npm module",
+    "generator",
+    "typescript",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^20.0.0",
+    "js-yaml": "^3.9.1",
+    "nsp": "^2.6.3",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.6.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "generator-node": "^2.2.0",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^1.0.0",
+    "yosay": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint .",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": "youngyou/generator-npm-module-typescript",
+  "private": true
+}

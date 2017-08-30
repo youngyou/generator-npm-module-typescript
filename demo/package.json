@@ -1,0 +1,70 @@
+{
+  "name": "generator-test",
+  "version": "1.0.0",
+  "description": "Test description.",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "homepage": "http://test.justso.cool",
+  "scripts": {
+    "clean": "rimraf lib",
+    "browserify": "browserify -e lib/index.js --standalone generatorTest --outfile lib/generator-test.browser.js",
+    "build": "npm run clean && tsc && npm run browserify",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "coverage": "npm test -- --coverage --no-cache",
+    "coverage:watch": "npm run coverage -- --watch",
+    "release": "standard-version && npm pack",
+    "prepare": "npm run build && npm test",
+    "prepublish": "nsp check",
+    "pretest": "tslint ."
+  },
+  "keywords": [
+    "test",
+    "yoeman"
+  ],
+  "author": {
+    "name": "Keyon U",
+    "email": "youngyou.name@gmail.com",
+    "url": "https://justso.cool"
+  },
+  "license": "MIT",
+  "repository": "youngyou/generator-test",
+  "devDependencies": {
+    "@types/jest": "^20.0.7",
+    "@types/node": "^8.0.25",
+    "browserify": "^14.4.0",
+    "jest": "^20.0.4",
+    "rimraf": "^2.6.1",
+    "standard-version": "^4.2.0",
+    "ts-jest": "^20.0.10",
+    "ts-loader": "^2.3.3",
+    "tslint": "^5.6.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "2.4.2",
+    "webpack": "^3.5.5",
+    "webpack-node-externals": "^1.6.0",
+    "nsp": "^2.6.3",
+    "jest-cli": "^20.0.0"
+  },
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "mapCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/tests/",
+      "/node_modules/"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "tests/.*\\.spec\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
+  }
+}
