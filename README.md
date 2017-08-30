@@ -25,7 +25,7 @@ yo npm-module-typescript
 
 ## License
 
- © [Keyon U](https://justso.cool)
+MIT © [Keyon U](https://justso.cool)
 
 
 [npm-image]: https://badge.fury.io/js/generator-npm-module-typescript.svg
